@@ -12,7 +12,5 @@ jobs:
               with:
                 distribution: 'oracle' # See 'Supported distributions' for available options
                 java-version: '21'
-            - run: git clone https://github.com/NScelles/docker_exercise_spring.git
-            - run: mv ./docker_exercise_spring/* . 
-            - run: mvn install
+            - run: mvn dependency:resolve
             - run: mvn clean package
