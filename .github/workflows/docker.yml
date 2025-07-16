@@ -5,7 +5,7 @@ jobs:
         runs-on: ubuntu-latest
         env:
             USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-            PASSWORD: ${{ secrets.DOCKERHUB.PASSWORD }}
+            PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
         steps:
             - name: login dockerhub
               uses: docker/login-action@v3
