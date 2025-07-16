@@ -4,6 +4,8 @@ on:
 jobs:
     message:
         runs-on: ubuntu-latest
+        permissions:
+            issues: write
         env:
             GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             ISSUE_URL: ${{ github.event.issue.html_url}}
