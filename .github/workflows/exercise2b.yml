@@ -8,7 +8,7 @@ jobs:
             GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             ISSUE_URL: ${{ github.event.issue.html_url}}
             ISSUE_NAME: ${{ github.event.issue.title }}
-            USER_NAME: ${{ github.event.issue.user.name }}
+            USER_NAME: ${{ github.event.issue.assignee.name }}
         steps:
             - name: Say Response
               run: gh issue comment $ISSUE_URL --body "Bonjour $USER_NAME, nous avons bien pris en compte votre problème du nom de $ISSUE_NAME"
