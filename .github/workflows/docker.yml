@@ -14,5 +14,7 @@ jobs:
                 password: ${{ env.PASSWORD }}
             - name: checkout code
               uses: actions/checkout@v4
-            - name: build docker hub
-              run: docker build -t $USERNAME/github-action
+            - name: build docker image
+              run: docker build -t $USERNAME/github-action .
+            - name: push dockerhub
+              run: docker push $USERNAME/github-action
