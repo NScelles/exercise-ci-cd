@@ -27,3 +27,8 @@ jobs:
               with:
                 name: build_app
                 path: target/*.jar
+    info:
+        runs-on : ubuntu-latest
+        steps:
+            - name: infos de mon contexte github
+              run: echo "${{ toJson(github) }}"
