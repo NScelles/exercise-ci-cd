@@ -1,6 +1,7 @@
 name: exercise
 on:
-    issues
+    issues:
+        types: opened
 jobs:
     message:
         runs-on: ubuntu-latest

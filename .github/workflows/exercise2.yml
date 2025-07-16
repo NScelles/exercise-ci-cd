@@ -6,7 +6,7 @@ jobs:
         runs-on: ubuntu-latest
         env:
             GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            USER_NAME: ${{ github.event.forkee.name }}
+            USER_NAME: ${{ github.event.forkee.owner.name }}
         steps:
             - name: Say Thank
               run: echo "🙌 Merci, $USER_NAME 🙌"
